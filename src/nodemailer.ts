@@ -6,7 +6,7 @@ export const transporter = nodemailer.createTransport({
   port: 465,//587,
   secure: true,
   auth: {
-    user: 'autoreply.pointmedical@gmail.com',
-    pass: 'lkcgorwgwrjnhuqh',
+    user: 'info@point-medical.com',
+    pass: 'ywrqcqayujghygfs',
   },
 })

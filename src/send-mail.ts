@@ -53,6 +53,8 @@ export const sendMail = async (req: Request, res: Response) => {
     <div>
     <p>Dear ${receiverName || 'User'},</p>
     <br />
+    <p>Thank you for connecting with us.</p>
+    <br />
     <p>Kindly, be informed that we have received your email, and our team is working to get your inquiry answered.  We will get back to you soon.</p>
     <br />
     <p>Sincerely,</p>
