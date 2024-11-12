@@ -11,6 +11,7 @@ export const sendMail = async (req: Request, res: Response) => {
   }: any = req.body; 
   console.log('receiver email: ', receiverEmail)
 
+  const imgUrl = `https://raw.githubusercontent.com/Point-Medical/Co/471391a5cdc58dd0b615d86438f02d50b2014c06/Studio-Project.png`  
 
   const mailOptionsForAdmin = {
     from: process.env.SMTP_SENDER_EMAIL,
@@ -24,6 +25,9 @@ export const sendMail = async (req: Request, res: Response) => {
 		`,
     html: `
     <div>
+    <div>
+      <img src="${imgUrl}" alt="img-logo" width="300px" />
+    </div>
     <p>Name: ${receiverName}</p>
     <br />
     <p>Email: ${receiverEmail}</p>
@@ -31,6 +35,9 @@ export const sendMail = async (req: Request, res: Response) => {
     <p>Subject: ${subject}</p>
     <br />
     <p>Message: ${message}</p>
+    <div>
+      <img src="${imgUrl}" alt="img-logo" width="300px" />
+    </div>
     </div>
     `
   };
@@ -51,6 +58,9 @@ export const sendMail = async (req: Request, res: Response) => {
 		`,
     html: `
     <div>
+    <div>
+      <img src="${imgUrl}" alt="img-logo" width="300px" />
+    </div>
     <p>Dear ${receiverName || 'User'},</p>
     <br />
     <p>Thank you for connecting with us.</p>
@@ -60,6 +70,9 @@ export const sendMail = async (req: Request, res: Response) => {
     <p>Sincerely,</p>
     <br />
     <p>Point Medical Team.</p>
+    <div>
+      <img src="${imgUrl}" alt="img-logo" width="300px" />
+    </div>
     </div>
     `
   };
